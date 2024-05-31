@@ -6,10 +6,10 @@ import {
   selectError,
   selectIsLoading,
   selectFavorites,
-  // selectModalCamper,
+  selectModalCamper,
 } from '../../store/selectors';
 import CamperCard from './CamperCard';
-// import CamperModal from '../CamperModal/CamperModal';
+import CamperModal from '../CamperModal/CamperModal';
 import Loader from '../Loader/Loader';
 import css from './camperList.module.css';
 import noCampersImage from '../../image/stop.png';
@@ -18,7 +18,7 @@ const CamperList = ({ campers }) => {
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
   const favorites = useSelector(selectFavorites);
-  // const modalCamper = useSelector(selectModalCamper);
+  const modalCamper = useSelector(selectModalCamper);
   const dispatch = useDispatch();
   const location = useLocation();
   const navigate = useNavigate();
@@ -71,7 +71,7 @@ const CamperList = ({ campers }) => {
           onShowMore={handleShowMore}
         />
       ))}
-      {/* {modalCamper && <CamperModal camper={modalCamper} />} */}
+      {modalCamper && <CamperModal camper={modalCamper} />}
     </div>
   );
 };

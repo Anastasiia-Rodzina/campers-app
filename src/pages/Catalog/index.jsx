@@ -103,7 +103,7 @@ const Catalog = () => {
               className={css.catalogInput}
               type="text"
               name="location"
-              placeholder="Kyiv, Ukraine"
+              placeholder="City"
               value={filters.location}
               onChange={handleFilterChange}
               onKeyDown={handleKeyDown}
