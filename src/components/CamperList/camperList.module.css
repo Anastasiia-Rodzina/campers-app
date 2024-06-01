@@ -90,6 +90,7 @@
 .camperImg {
   object-fit: cover;
   border-radius: 10px;
+  height: 310px;
 }
 
 .camperButtonWraper {

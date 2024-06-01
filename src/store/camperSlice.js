@@ -34,7 +34,7 @@ const camperSlice = createSlice({
         state.favorites.push(camperId);
       }
     },
-    setFavoritesFromStorage(state, action) {
+    setFavorites(state, action) {
       state.favorites = action.payload;
     },
     openModal(state, action) {
@@ -69,7 +69,7 @@ export const {
   resetPage,
   incrementPage,
   toggleFavorite,
-  setFavoritesFromStorage,
+  setFavorites,
   openModal,
   closeModal,
 } = camperSlice.actions;
