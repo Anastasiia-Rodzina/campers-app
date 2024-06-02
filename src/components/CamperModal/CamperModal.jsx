@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { closeModal } from '../../store/camperSlice';
+import { closeModal } from '../../redux/camperSlice';
 import css from './camperModal.module.css';
 import ModalHeader from './ModalHeader';
 import ModalTabs from './ModalTabs';
@@ -12,7 +12,7 @@ import ModalDetails from './ModalDetails';
 import ModalReviews from './ModalReviews';
 import ModalForm from './ModalForm';
 import Loader from '../Loader/Loader';
-import { selectIsLoading } from '../../store/selectors';
+import { selectIsLoading } from '../../redux/selectors';
 
 const CamperModal = ({ camper }) => {
   const dispatch = useDispatch();

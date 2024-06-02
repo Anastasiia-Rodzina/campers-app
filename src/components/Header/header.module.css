@@ -12,10 +12,11 @@
 .headerNav {
   display: flex;
   box-sizing: border-box;
-  gap: 40px;
+  gap: 80px;
 
   max-width: 1440px;
   padding: 10px;
+  padding-left: 50px;
 }
 
 .headerNavList {

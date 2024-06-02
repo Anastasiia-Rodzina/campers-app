@@ -1,13 +1,13 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { toggleFavorite, openModal } from '../../store/camperSlice';
+import { toggleFavorite, openModal } from '../../redux/camperSlice';
 import {
   selectError,
   selectIsLoading,
   selectFavorites,
   selectModalCamper,
-} from '../../store/selectors';
+} from '../../redux/selectors';
 import CamperCard from './CamperCard';
 import CamperModal from '../CamperModal/CamperModal';
 import Loader from '../Loader/Loader';

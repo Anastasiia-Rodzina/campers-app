@@ -16,7 +16,7 @@
   border-radius: 20px;
 
   max-width: 902px;
-  max-height: 90vh;
+  max-height: 80vh;
   overflow-y: scroll;
   position: relative;
 
@@ -24,7 +24,7 @@
   flex-direction: column;
 
   gap: 24px;
-  top: 80px;
+  top: 40px;
 }
 
 .modal::-webkit-scrollbar {
@@ -87,17 +87,14 @@
 } */
 
 .bookingForm {
-  width: 50%;
+  width: 448px;
   border-radius: 10px;
   border: 1px solid rgba(16, 24, 40, 0.2);
   padding: 24px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
-/* .bookingFormInput {
-  width: 100%;
-} */
+
 .bookingFormFlex {
   margin-top: 24px;
 }
@@ -183,6 +180,10 @@
 
 .modalDetailsTitle {
   position: relative;
+  font-weight: 600;
+  font-size: 20px;
+  color: #101828;
+  padding-bottom: 24px;
 }
 
 .modalDetailsTitle::after {
@@ -191,18 +192,20 @@
 
   left: 0;
   right: 0;
-  bottom: -24px;
+  bottom: 24px;
   height: 1px;
   background-color: rgba(16, 24, 40, 0.1);
 }
 .modalDetails {
   color: #101828;
+  font-weight: 500;
   font-size: 18px;
   line-height: 1.33;
 }
 .modalDetailsItem {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 14px;
 }
 .modalFormBooking {
   margin-bottom: 8px;
@@ -276,6 +279,8 @@
 
 .modalImg {
   width: calc((100% - 32px) / 3);
-  height: auto;
+  /* width: 290px; */
+  height: 310px;
+  object-fit: cover;
   border-radius: 10px;
 }

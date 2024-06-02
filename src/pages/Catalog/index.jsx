@@ -4,8 +4,12 @@ import { useNavigate } from 'react-router-dom';
 import { fetchCamper } from '../../api/api';
 import CamperList from '../../components/CamperList/CamperList';
 import { Button } from '../../components/Button/Button';
-import { selectCampers, selectIsLoading, selectError } from 'store/selectors';
-import { resetPage, incrementPage } from '../../store/camperSlice';
+import {
+  selectCampers,
+  selectIsLoading,
+  selectError,
+} from '../../redux/selectors';
+import { resetPage, incrementPage } from '../../redux/camperSlice';
 import Filters from './Filters';
 import Loader from 'components/Loader/Loader';
 import sprite from '../../image/icons/sprite.svg';
@@ -96,7 +100,7 @@ const Catalog = () => {
         <section className={css.catalogLeft}>
           <p className={css.catalogLocationItem}>Location</p>
           <div className={css.catalogInputWrapper}>
-            <svg className={commonModuleCss.icon}>
+            <svg className={css.inputIconLocation}>
               <use href={`${sprite}#map_pin`} />
             </svg>
             <input
