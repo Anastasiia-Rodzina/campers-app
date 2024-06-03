@@ -28,8 +28,8 @@
 }
 
 .modal::-webkit-scrollbar {
-  width: 0px; /* Приховуємо ползунок для браузерів на основі WebKit */
-  background: transparent; /* Робимо фоновий колір прозорим */
+  width: 0px;
+  background: transparent;
 }
 
 .closeButton {
@@ -70,21 +70,13 @@
 
   left: 0;
   right: 0;
-  bottom: -24px; /* Відстань від тексту до лінії підкреслення */
-  height: 5px; /* Товщина підкреслення */
-  background-color: #e44848; /* Колір підкреслення відповідає кольору тексту */
+  bottom: -24px;
+  height: 5px;
+  background-color: #e44848;
 }
 .tabContent {
   margin-top: 14px;
-  /* font-size: 0.9em; */
 }
-
-/* .tabContent img.modalImg {
-  width: 290px;
-  height: 310px;
-  height: auto;
-  margin-bottom: 24px;
-} */
 
 .bookingForm {
   width: 448px;
@@ -254,6 +246,9 @@
   height: 60px;
   border-radius: 60px;
   background: #f2f4f7;
+  font-weight: 600;
+  font-size: 24px;
+  color: #e44848;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -274,12 +269,12 @@
 .modalImgContainer {
   display: flex;
   gap: 16px;
-  margin-bottom: 24px; /* Відстань між зображеннями */
+  margin-bottom: 24px;
 }
 
 .modalImg {
   width: calc((100% - 32px) / 3);
-  /* width: 290px; */
+
   height: 310px;
   object-fit: cover;
   border-radius: 10px;

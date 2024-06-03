@@ -16,6 +16,11 @@ const initialState = {
   modalCamper: null,
 };
 
+const filterDuplicates = (existingCampers, newCampers) => {
+  const existingIds = new Set(existingCampers.map(camper => camper._id));
+  return newCampers.filter(camper => !existingIds.has(camper._id));
+};
+
 const camperSlice = createSlice({
   name: 'camper',
   initialState,
@@ -51,13 +56,14 @@ const camperSlice = createSlice({
       })
       .addCase(fetchCamper.fulfilled, (state, action) => {
         state.isLoading = false;
+        const newCampers = action.payload;
         if (state.page === 1) {
-          state.campers = action.payload;
+          state.campers = newCampers;
         } else {
-          state.campers = [...state.campers, ...action.payload];
+          const uniqueNewCampers = filterDuplicates(state.campers, newCampers);
+          state.campers = [...state.campers, ...uniqueNewCampers];
         }
       })
-
       .addCase(fetchCamper.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;

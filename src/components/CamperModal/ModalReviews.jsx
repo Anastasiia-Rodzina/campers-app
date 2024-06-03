@@ -6,10 +6,10 @@ const ModalReviews = ({ reviews }) => (
     {reviews.map((review, index) => (
       <div key={index}>
         <div className={css.reviewAvatartBox}>
-          <p className={css.reviewAvatar}>{review.reviewer_name}</p>
+          <p className={css.reviewAvatar}>{review.reviewer_name.charAt(0)}</p>
           <div>
             <p>
-              <strong>{review.reviewer_name}</strong>:
+              <strong>{review.reviewer_name}</strong>
             </p>
             <ReactStars
               count={5}
